@@ -1,0 +1,28 @@
+body {
+  background: black;
+}
+
+#program-add {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  margin-top: 2.1rem;
+  margin-right: 1.5rem;
+
+  background: url(images/add_program.png) no-repeat center / 3rem;
+  background-size: 100% auto;
+}
+
+#program-list {
+  position: relative;
+  top: 5rem;
+}
+#program-list .program-item {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background-color: #CCCCDD;
+}
