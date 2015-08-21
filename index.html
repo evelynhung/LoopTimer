@@ -9,10 +9,18 @@
   </head>
 
   <body>
-    <div id="main-panel">
-      <div id="program-add"></div>
-      <div id="program-list"></div>
-    </div>
+    <section role="navigation" id="program-menu" data-index="0" class="hidden">
+      <div id="icon-program-add" class="icon"  data-link="program-detail"></div>
+      <ul id="program-list">
+      </ul>
+    </section>
+    <section role="region" id="program-detail" data-index="1" class="active">
+      <div id="icon-menu" class="icon" data-link="program-menu"></div>
+      <div id="icon-timer-add" class="icon" data-link="timer-setup"></div>
+    </section>
+    <section role="region" id="timer-setup" data-index="2" class="hidden">
+      <div>timer setup!</div>
+    </section>
   </body>
 
   <script data-main="js/startup.js" src="js/vendor/alameda.js"></script>

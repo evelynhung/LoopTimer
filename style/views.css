@@ -1,21 +1,83 @@
 body {
   background: black;
+  overflow-x: hidden;
 }
 
-#program-add {
+section {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
 
+section[role="navigation"] {
+  background: blue;
+}
+
+section.active {
+  z-index: 2;
+}
+
+section.hidden {
+  display: none;
+}
+
+#timer-setup {
+  background: red;
+}
+
+.slide-in-left {
+  animation-duration: 1s;
+  animation-name: slide-in-left;
+}
+
+.slide-in-right {
+  animation-duration: 1s;
+  animation-name: slide-in-right;
+}
+
+.slide-out-left {
+  animation-duration: 1s;
+  animation-name: slide-out-left;
+}
+
+.slide-out-right {
+  animation-duration: 1s;
+  animation-name: slide-out-right;
+}
+
+.icon {
+  position: absolute;
   width: 3rem;
   height: 3rem;
   border: none;
   margin-top: 2.1rem;
   margin-right: 1.5rem;
-
-  background: url(images/add_program.png) no-repeat center / 3rem;
   background-size: 100% auto;
 }
+
+#icon-menu {
+  top: 0;
+  left: 0;
+  background: url(images/show-menu-icon.png) no-repeat center / 3rem;
+}
+
+#icon-program-add {
+  top: 0;
+  left: 0;
+  background: url(images/new_program.png) no-repeat center / 3rem;
+}
+
+#icon-timer-add {
+  top: 0;
+  right: 0;
+  background: url(images/add_timer.png) no-repeat center / 3rem;
+}
+
 
 #program-list {
   position: relative;
@@ -25,4 +87,38 @@ body {
   margin-top: 0.5rem;
   padding: 1rem;
   background-color: #CCCCDD;
+}
+
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-out-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
